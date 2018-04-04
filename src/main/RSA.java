@@ -90,4 +90,47 @@ public class RSA {
         } 
 		return array;
     }
+
+	
+	public static BigInteger Encrypt_SQM(String plaintext) {
+		BigInteger message = string_to_num(plaintext);
+		BigInteger result = SQM.Square_multiple(message, b, n);
+		return result;
+	}
+	
+	public static String Decrypt_SQM(BigInteger ciphertext) {
+		BigInteger decrypt = SQM.Square_multiple(ciphertext, a, n);
+		String plaintext = num_to_string(decrypt);
+		return plaintext;
+	}
+
+	public static BigInteger Encrypt_non(String plaintext) {
+		BigInteger message = string_to_num(plaintext);
+		BigInteger temp = b;
+		boolean end = true;
+		while(end) {
+			message = message.multiply(message);
+			message = message.mod(n);
+			b=b.subtract(BigInteger.ONE);
+			if(b.equals(BigInteger.ZERO))
+				end = false;
+		}
+		BigInteger result = message.mod(n);
+		return result;
+	}
+	
+	public static String Decrypt_non(BigInteger ciphertext) {
+		BigInteger cipher = ciphertext;
+		boolean end = true;
+		while(end) {
+			cipher = cipher.multiply(cipher);
+			cipher = cipher.mod(n);
+			a=a.subtract(BigInteger.ONE);
+			if(a.equals(BigInteger.ZERO))
+				end = false;
+		}
+		BigInteger decrypt = cipher.mod(n);
+		String plaintext = num_to_string(decrypt);
+		return plaintext;
+	}
 }

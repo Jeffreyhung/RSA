@@ -6,7 +6,7 @@ import java.security.SecureRandom;
 public class Initialize {
 	public static BigInteger p, q, b, n, a, n_phi;
 	
-	public static void Initialize(int length) {
+	public static void Init(int length) {
 		SecureRandom random = new SecureRandom();
 		p = BigInteger.probablePrime(length/2, random);
 		q = BigInteger.probablePrime(length/2, random);
