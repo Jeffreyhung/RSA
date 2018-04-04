@@ -1,30 +1,11 @@
 package main;
 
 import java.math.BigInteger;
-import java.util.Scanner;
 
 public class Extended_Euclid_Algorithm {
 	public static BigInteger x =new BigInteger("0");
 	public static BigInteger y=new BigInteger("0");
 	public static int i=0;
-
-	public static void main(String[] args) {
-		BigInteger result;
-		BigInteger a = new BigInteger("92204805");
-		BigInteger b = new BigInteger("139928096");
-		System.out.print("Enter the first number: ");
-		Scanner input = new Scanner(System.in);
-		a = new BigInteger(input.nextLine());
-		System.out.print("Enter the second number: ");
-		b= new BigInteger(input.nextLine());
-		input.close();
-		exchange(a, b); // make sure a > b, x > y
-		result = gcd(x,y);
-		System.out.println("gcd("+x+","+y+")="+result);
-		BigInteger[] coeff = Euclid(x,y,BigInteger.ONE,BigInteger.ZERO,BigInteger.ZERO,BigInteger.ONE, result);
-		System.out.println("("+coeff[0]+"*"+x+")+("+coeff[1]+"*"+y+")="+result);
-		
-	}
 	
 	public static BigInteger[] Euclid(BigInteger a, BigInteger b, BigInteger s1, BigInteger t1, BigInteger s2, BigInteger t2, BigInteger GCD) {
 		BigInteger[] coeff = new BigInteger[] {s1,t1};
@@ -53,15 +34,4 @@ public class Extended_Euclid_Algorithm {
 		}
 		
 	}
-	
-	public static void exchange(BigInteger a, BigInteger b) {
-		if(a.compareTo(b)==1) {
-			x = a;
-			y = b;
-		}else {
-			x=b;
-			y=a;
-		}
-	}
-
 }

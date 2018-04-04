@@ -34,7 +34,6 @@ public class Initialize {
 	public static BigInteger getA() {
 		return a;
 	}
-
 	public static BigInteger getN() {
 		return n;
 	}
