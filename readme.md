@@ -47,15 +47,19 @@ Chinese Remainder Thereom
 >Find y<sub>p</sub> and y<sub>q</sub> <br>
 >>y<sub>p</sub> = y mod p<br>
 >>y<sub>q</sub> = y mod q<br>
+
 >Find a<sub>p</sub> and a<sub>q</sub> <br>
 >>a<sub>p</sub> = a mod (p-1)<br>
 >>a<sub>q</sub> = a mod (q-1)<br>
+
 >Find X<sub>p</sub> and X<sub>q</sub> <br>
 >>X<sub>p</sub> = y<sub>p</sub><sup>ap</sup> mod p<br>
 >>X<sub>q</sub> = y<sub>q</sub><sup>aq</sup> mod q<br>
+
 >Find U<sub>p</sub> and U<sub>q</sub> <br>
 >>U<sub>p</sub> = q<sup>-1</sup> mod p<br>
 >>U<sub>q</sub> = p<sup>-1</sup> mod q<br>
+
 >X = X<sub>p</sub> q U<sub>p</sub> + X<sub>q</sub> P U<sub>q</sub> <br>
 
 
