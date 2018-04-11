@@ -64,7 +64,7 @@ Chinese Remainder Thereom
 
 Efficiency Compare
 ------------------
-![image](picture or gif url)
+![image](https://github.com/Jeffreyhung/RSA/blob/master/2018-04-11_155910.jpg)
 
 
 
