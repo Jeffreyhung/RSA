@@ -6,7 +6,7 @@ RSA Introduction
 Find two prime p and q<br>
 Compute n and Φ(n), where n=p*q and Φ(n)=(p-1)(q-1)<br>
 Find prime number b<br>
-Compute a, where a = b-1 mod Φ(n) <br>
+Compute a, where a = b^(-1) mod Φ(n) <br>
 
 Public Key: (n, b)<br>
 Private Key: (p, q, a)<br>
@@ -16,6 +16,12 @@ Decryption: d(Y) = Y^a mod n<br>
 
 Implementation
 --------------
+Using Euclid’s Algorithm to find GCD of two numbers <br>
+>Find GCD of X and Y<br>
+Using Euclid’s Totient function to find Φ(n) <br>
+>Find Φ(n) = (p-1)(q-1) Because p & q are prime<br>
+Using Extended Euclid's Algorithm to find Multiplicative Inverse <br>
+>Compute r and s, where r * X + s * Y = GCD(X, Y)<br>
 
 
 
