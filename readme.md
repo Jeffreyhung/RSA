@@ -1,9 +1,21 @@
 RSA Implementation
 ==================
 
-Introduction
+RSA Introduction
 ------------
+Find two prime p and q<br>
+Compute n and Φ(n), where n=p*q and Φ(n)=(p-1)(q-1)<br>
+Find prime number b<br>
+Compute a, where a = b-1 mod Φ(n) <br>
 
+Public Key: (n, b)<br>
+Private Key: (p, q, a)<br>
+
+Encryption: e(X) = X^b mod n<br>
+Decryption: d(Y) = Y^a mod n<br>
+
+Implementation
+--------------
 
 
 
