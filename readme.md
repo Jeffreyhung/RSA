@@ -42,7 +42,7 @@ Square and multiply algorithm
 >>When b<sub>i</sub> =1, you square AND you multiply
 >>When b<sub>i</sub> =0, you only square
 
-Chinese Remainder Thereom
+Chinese Remainder Theorem
 >Compute y<sup>a</sup> mod n = X<br>
 >Find y<sub>p</sub> and y<sub>q</sub> <br>
 >>y<sub>p</sub> = y mod p<br>
@@ -62,10 +62,10 @@ Chinese Remainder Thereom
 
 >X = X<sub>p</sub> q U<sub>p</sub> + X<sub>q</sub> P U<sub>q</sub> <br>
 
-Efficiency Compare
+Efficiency Comparison 
 ------------------
 ![image](https://github.com/Jeffreyhung/RSA/blob/master/Comparison_Chart.jpg) <br>
-When the key length exceed around 900 bits long, the CRT algorithm starts to out perform than the one's with out CRT algorithm.
+When the key length exceed around 800 bits long, the CRT algorithm starts to out perform than the one's without CRT algorithm.
 
 
 Usage
@@ -81,10 +81,10 @@ The key length should only be numbers, the message can be any characters.<br>
 Note that if the message has a longer length than the key, the encrypted and decrypted result will be garbled.
 
 
-User can choose to use Chinese Remainder Thereom for the encryption and decryption or not with the following command:
->	Use Chinese Remainder Thereom? (T/F):
+User can choose to use Chinese Remainder Theorem  for the encryption and decryption or not with the following command:
+>	Use Chinese Remainder Theorem ? (T/F):
 
-The Input should be only T, t, F or f, any other inputs will be consider as true.
+The Input should be only T, t, F or f, any other inputs will be considered as true.
 
 
 The application will show the Public Key, Private Key, Ciphertext and decrypt result with the following command:

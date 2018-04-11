@@ -17,7 +17,7 @@ public class App {
 		int length = Integer.parseInt(input.nextLine());
 		System.out.print("Please enter the message: "); 
 		x = input.nextLine();
-		System.out.print("Use Chinese Remainder Thereom? (T/F): "); 
+		System.out.print("Use Chinese Remainder Theorem? (T/F): "); 
 		String def = input.nextLine();
 		input.close();
 		Initialize.Init(length);
