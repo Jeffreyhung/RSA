@@ -17,11 +17,14 @@ Decryption: d(Y) = Y^a mod n<br>
 Implementation
 --------------
 Using Euclid’s Algorithm to find GCD of two numbers <br>
->Find GCD of X and Y<br>
+>Find GCD of X and Y
+
 Using Euclid’s Totient function to find Φ(n) <br>
->Find Φ(n) = (p-1)(q-1) Because p & q are prime<br>
+>Find Φ(n) = (p-1)(q-1) Because p & q are prime
+
 Using Extended Euclid's Algorithm to find Multiplicative Inverse <br>
->Compute r and s, where r * X + s * Y = GCD(X, Y)<br>
+>Compute r and s, where r * X + s * Y = GCD(X, Y)
+
 
 
 
