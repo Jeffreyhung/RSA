@@ -31,7 +31,7 @@ Square and multiply algorithm
 >Compute x^b mod n<br>
 >Express the exponent b as a binary number
 >>b = b<sub>k-1</sub> b<sub>k-2</sub> b<sub>k-3</sub> b<sub>k-4</sub>…b<sub>2</sub> b<sub>1</sub> b<sub>0</sub> <br>
->>b = b<sub>k-1</sub> 2k-1 +b<sub>k-2</sub> 2k-2 + b<sub>k-3</sub> 2k-3 +…+b<sub>1</sub>21 + b<sub>0</sub>
+>>b = b<sub>k-1</sub> 2<sup>k-1</sup> +b<sub>k-2</sub> 2<sup>k-2</sup> + b<sub>k-3</sub> 2<sup>k-3</sup> +…+b<sub>1</sub>2<sup>1</sup> + b<sub>0</sub>
 
 >We can write it as <br>
 >>b = (((…(b<sub>k-1</sub>2 +b<sub>k-2</sub>)2+b<sub>k-3</sub>)2+…+b<sub>1</sub>)2+b<sub>0</sub>
