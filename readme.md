@@ -64,7 +64,7 @@ Chinese Remainder Thereom
 
 Efficiency Compare
 ------------------
-![image](https://github.com/Jeffreyhung/RSA/blob/master/2018-04-11_155910.jpg =250x) <br>
+![image](https://github.com/Jeffreyhung/RSA/blob/master/2018-04-11_155910.jpg) <br>
 When the key length exceed around 900 bits long, the CRT algorithm starts to out perform than the one's with out CRT algorithm.
 
 
