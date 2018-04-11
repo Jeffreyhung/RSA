@@ -1,5 +1,6 @@
 package RSA;
 import java.math.BigInteger;
+import java.util.Base64;
 import java.util.Scanner;
 
 public class App {
@@ -7,42 +8,43 @@ public class App {
 	public static String x, y;
 	
 	public static void main(String[] args) {
-		long startTime, endTime, gap0, gap1, gap2;
+		long startTime, endTime, gap;
+		BigInteger cipher = null;
+		String plaintext = null;
 		
 		Scanner input = new Scanner(System.in);
 		System.out.print("Please enter the length: "); 
 		int length = Integer.parseInt(input.nextLine());
 		System.out.print("Please enter the message: "); 
 		x = input.nextLine();
+		System.out.print("Use Chinese Remainder Thereom? (T/F): "); 
+		String def = input.nextLine();
 		input.close();
 		Initialize.Init(length);
 		
-		
-		startTime = System.nanoTime();    
-		BigInteger cipher = RSA.Encrypt(x);
-		String plaintext = RSA.Decrypt(cipher);
-		endTime = System.nanoTime();    
-		gap0 = endTime - startTime;
-		
-		startTime = System.nanoTime();    
-		RSA.Decrypt_SQM(RSA.Encrypt_SQM(x));
-		endTime = System.nanoTime();
-		gap1 = endTime - startTime;
-		
 		startTime = System.nanoTime();
+		if(def.equals("F")||def.equals("f")) {
+			cipher = RSA.Encrypt_SQM(x);
+			plaintext = RSA.Decrypt_SQM(cipher);
+		}else {
+			cipher = RSA.Encrypt(x);
+			plaintext = RSA.Decrypt(cipher);
+		}
+		endTime = System.nanoTime(); 
+		gap = endTime - startTime;
+		
 //		String plaintext2 = RSA.Decrypt_non(RSA.Encrypt_non(x));
-		endTime = System.nanoTime();    
-		gap2 = endTime - startTime;
 		
-
-		System.out.println("Public Key: "+ Initialize.getB());
-		System.out.println("Private Key: "+ Initialize.getA());
+		System.out.println("");
+		String PubKey = new String(Base64.getEncoder().encode(Initialize.getB().toByteArray()));
+		System.out.println("Public Key: \t"+ PubKey);
+		String PriKey = new String(Base64.getEncoder().encode(Initialize.getA().toByteArray()));
+		System.out.println("Private Key: \t"+ PriKey);
 		
-		System.out.println("ciphertext: "+cipher);
+		String ciphertext = new String(Base64.getEncoder().encode(cipher.toByteArray()));
+		System.out.println("ciphertext: \t"+ciphertext);
 		System.out.println("decrypt result: "+plaintext);
 		System.out.println("");
-		System.out.println("Time With SQM & CRT: " + gap0);
-		System.out.println("Time With SQM: " + gap1);
-		System.out.println("Normal Time: " + gap2);		
+		System.out.println("Time Spent: " + gap +" nanoseconds.");		
 	}
 }
