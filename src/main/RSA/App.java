@@ -42,8 +42,8 @@ public class App {
 		System.out.println("Private Key: \t"+ PriKey);
 		
 		String ciphertext = new String(Base64.getEncoder().encode(cipher.toByteArray()));
-		System.out.println("ciphertext: \t"+ciphertext);
-		System.out.println("decrypt result: "+plaintext);
+		System.out.println("Ciphertext: \t"+ciphertext);
+		System.out.println("Decrypt Result: "+plaintext);
 		System.out.println("");
 		System.out.println("Time Spent: " + gap +" nanoseconds.");		
 	}
