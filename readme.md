@@ -28,12 +28,12 @@ Using Extended Euclid's Algorithm to find Multiplicative Inverse <br>
 
 ####Efficiency####
 Square and multiply algorithm
->Compute x^b mod n
+>Compute x^b mod n<br>
 >Express the exponent b as a binary number
->>b = b<sub>k-1</sub> b<sub>k-2</sub> b<sub>k-3</sub> b<sub>k-4</sub>…b<sub>2</sub> b<sub>1</sub> b<sub>0</sub>
->>b = b<sub>k-1</sub> 2k-1 +b<sub>k-2</sub> 2k-2 + b<sub>k-3</sub> 2k-3 +…+b<sub>1</sub>21 + b<sub>0</sub>
+>>b = b<sub>k-1</sub> b<sub>k-2</sub> b<sub>k-3</sub> b<sub>k-4</sub>…b<sub>2</sub> b<sub>1</sub> b<sub>0</sub> <br>
+>>b = b<sub>k-1</sub> 2k-1 +b<sub>k-2</sub> 2k-2 + b<sub>k-3</sub> 2k-3 +…+b<sub>1</sub>21 + b<sub>0</sub><br>
 >We can write it as 
->>b = (((…(b<sub>k-1</sub>2 +b<sub>k-2</sub>)2+b<sub>k-3</sub>)2+…+b<sub>1</sub>)2+b<sub>0</sub>
+>>b = (((…(b<sub>k-1</sub>2 +b<sub>k-2</sub>)2+b<sub>k-3</sub>)2+…+b<sub>1</sub>)2+b<sub>0</sub><br>
 >Algorithm
 >>When b<sub>i</sub> =1, you square AND you multiply
 >>When b<sub>i</sub> =0, you only square
