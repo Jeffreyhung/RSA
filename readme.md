@@ -62,6 +62,11 @@ Chinese Remainder Thereom
 
 >X = X<sub>p</sub> q U<sub>p</sub> + X<sub>q</sub> P U<sub>q</sub> <br>
 
+Efficiency Compare
+------------------
+![image](picture or gif url)
+
+
 
 Usage
 -----
