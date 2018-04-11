@@ -2,8 +2,7 @@
 >>	java -jar RSA.jar
 
 >User will be ask to input key length and message to input with the following command:
->>	Please enter the length: 
-
+>>	Please enter the length: <br>
 >>	Please enter the message: 
 
 >The key length should only be numbers, the message can be any characters.
