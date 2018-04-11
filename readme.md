@@ -16,7 +16,7 @@ Decryption: d(Y) = Y^a mod n<br>
 
 Implementation
 --------------
-*Computation*
+**Computation**
 Using Euclid’s Algorithm to find GCD of two numbers <br>
 >Find GCD of X and Y
 
@@ -27,7 +27,7 @@ Using Extended Euclid's Algorithm to find Multiplicative Inverse <br>
 >Compute r and s, where r * X + s * Y = GCD(X, Y)
 
 
-*Efficiency*
+**Efficiency**
 Square and multiply algorithm
 >Compute x^b mod n<br>
 >Express the exponent b as a binary number
