@@ -3,7 +3,8 @@ run the RSA.jar file:
 
 User will be ask to input key length and message to input with the following command:
 >	Please enter the length: <br>
->	Please enter the message: <br>
+>	Please enter the message: 
+
 The key length should only be numbers, the message can be any characters.<br>
 Note that if the message has a longer length than the key, the encrypted and decrypted result will be garbled.
 
