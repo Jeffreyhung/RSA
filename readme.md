@@ -73,7 +73,7 @@ Usage
 run the RSA.jar file: 
 >	java -jar RSA.jar
 
-User will be ask to input key length and message to input with the following command:
+User will be ask to input the key length and the message with the following command:
 >	Please enter the length: <br>
 >	Please enter the message: 
 
